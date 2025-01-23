@@ -1,0 +1,17 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <dirent.h>
+void main()
+{
+	DIR *dir;
+	struct dirent *ptr2;
+	char dir_name[25];
+	printf("\nEnter the Directory");
+	scanf("%s", dir_name);
+	dir=opendir(dir_name);
+	while((ptr2=readdir(dir))!=NULL)
+
+	printf("%ld\t%s\t",ptr2->d_ino,ptr2->d_name);
+	closedir(dir);
+}
+	
