@@ -1,0 +1,26 @@
+student@dl-20:~$ cd rifa51
+student@dl-20:~/rifa51$ gedit file.c
+student@dl-20:~/rifa51$ gcc file.c
+student@dl-20:~/rifa51$ ./a.out
+
+Enter the Directoryhehe
+6688710	oddoreven.odt	6690543	sumofdigits.odt	6690537	CALCULATOR.odt	6685203	..	6690541	FACTORIAL.odt	6684955	RIFA	6688800	.	student@dl-20:~/rifa51$ gedit file1.c
+student@dl-20:~/rifa51$ gcc file1.c
+student@dl-20:~/rifa51$ ./a.out
+Enter the text to be Written
+HEYY THEREE...!!
+
+The contents are :
+HEYYOTHEREE!!
+
+student@dl-20:~/rifa51$ gedit file2.c
+student@dl-20:~/rifa51$ gcc file2.c
+student@dl-20:~/rifa51$ ./a.out
+child process id=9225
+Thursday 23 January 2025 12:09:40 PM IST
+parent process id=9224
+child process createdstudent@dl-20:~/rifa51$ ^C
+student@dl-20:~/rifa51$ 
+
+
+
