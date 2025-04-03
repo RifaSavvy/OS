@@ -1,0 +1,58 @@
+//FCFS
+#include<stdio.h>
+void main(){
+    int n,i,j,temp;
+    int p[10],bt[10],wt[10],tt[10];
+    float avg_tt=0,avg_wt=0;
+    
+    //process entereyyanam
+    printf("Enter the number of processes:\n");
+    scanf("%d",&n);
+    
+    //burst time entereyyanam..nnatt for loop...burst time insert
+    printf("Enter the Burst Time for each Processes:\n");
+    for(i=0;i<n;i++){
+        p[i]=i+1;
+        printf("P%d:",i+1);
+        scanf("%d",&bt[i]);
+    }
+    
+    //waiting time initializeyyanam 0...waiting time = waiting time of previous process + burst time of previous process..average timeilekk oro waiting times addeyth kodkkk
+    wt[0]=0;
+    for(i=1;i<n;i++){
+        wt[i]=wt[i-1] + bt[i-1];
+        avg_wt+= wt[i];
+    }
+    avg_wt/=n;
+    
+    //turnoaround time calculateyyanam...for loop...turnaround time=waiting time + burst time..averagikk addeyyanam
+    for(i=0;i<n;i++){
+        tt[i]=wt[i]+bt[i];
+        avg_tt+= tt[i];
+    }
+    avg_tt/=n;
+    
+    //process details printeyyanam tablepola..for loop...avg tt avg wt printanam
+    printf("\nProcess \tBurst Time\tWaiting Time\tTurnaround Time\n");
+    for(i=0;i<n;i++){
+        printf("\nP%d\t\t\t\t%d\t\t\t\t%d\t\t\t\t%d\n",p[i],bt[i],wt[i],tt[i]);
+    }
+    printf("\n Average Waiting Time:%.2f",avg_tt);
+    printf("\n Average Turnaround Time:%.2f",avg_wt);
+    
+    //gantt chart printanam...for loop
+    printf("\nGantt chart:\n");
+    printf("--------------------------------\n");
+    for(i=0;i<n;i++){
+        printf("|\tP%d\t",p[i]);
+    }
+    printf("|\n");
+    printf("-------------------------------\n");
+    printf("%d",wt[0]);
+    
+    for(i=0;i<n;i++){
+        printf("\t\t%d",tt[i]);
+    }
+    printf("\n-------------------------------\n");
+
+}
